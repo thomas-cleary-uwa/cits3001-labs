@@ -1,0 +1,18 @@
+Write a class, MazeAgent, that implements a basic agent navigating a maze. 
+The agent initially doesn't know the layout of the maze, and has to explore to find the way to the goal. 
+The Maze is a ten by ten grid where some grid cells are empty, and some are solid, and the agent needs to reach the lower left coordinate (0,0). 
+The agents percepts are the coordinates of its current location and it action set are the directions it can move (Left, Right, Up, Down). 
+If it tries to move into a solid cell, it remains in its current location. 
+
+The agent must attempt to move around the grid to reach the cell (0,0), building a model of the environment as they go. 
+If a move is unsuccessful (so they stay where they are), the agent can deduce that the cell they tried to move to is solid. 
+This information can allow them to efficiently navigate a maze.
+
+The agent should implement two methods: reset() which is called when the agent is moved into a new maze, 
+    and get_next_move(x,y) which passes in the agent's current location as parameters, 
+    and expects a character 'L', 'R', 'U', 'D' to be returned, 
+    indicating the direction the agent will attempt to move.
+
+The test environment will place the agent in a maze, call the agent's reset method, 
+    and then call get_next_move repeatedly (up to 200 times) until the agent reaches the goal (0,0). 
+The agent passes if it reaches the goal.

@@ -1,0 +1,6 @@
+Implement the nearest neighbour algorithm, from Slide 31 of Lecture 3. Your method should try starting from every city and return the best tour found.
+
+For example:
+testCase("Basic", 3.5); 
+input: 3, 1.0, 1.0, 1.0, 2.0, 2.0, 1.0
+result: ?

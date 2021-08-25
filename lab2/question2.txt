@@ -1,0 +1,7 @@
+Implement a simple hill-climber to improve your solutions. 
+Apply 2-OPT from Page 47 of Lecture 3 iteratively for the improvement step; at each iteration, 
+    retain the change which gives the biggest improvement. 
+Return the current tour when it cannot be improved any further.
+
+https://en.wikipedia.org/wiki/2-opt
+- explained really well here

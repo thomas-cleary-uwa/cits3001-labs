@@ -1,0 +1,8 @@
+For any loop you included in your answer to part 1, define a method:
+
+loopInvariant(params), 
+
+The method should take the parameters of the current state in the method and return true if the invariant holds at that point.
+
+Use java assert statements to confirm that the invariant holds before the loop starts, and at the end of every iteration.
+
