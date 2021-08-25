@@ -101,6 +101,10 @@ class MazeAgent():
             (x, y+1, "U")
         ]
 
+        for move in moves:
+            if move[0] < 0 or move[1] < 0:
+                moves.remove(move)
+
         visited = []
         unvisited = []
 
@@ -264,20 +268,20 @@ def test_agent(maze):
         print("Move {}\nTelling agent current location ({}, {})\n".format(num_moves, next_x, next_y))
         move = agent.get_next_move(next_x, next_y)
 
-        agent.print_map_better()
+        agent.print_map()
         print("Next Agent Move: {}\n(Last successful move: {})\n".format(move, agent.last_success_move))
         print("-" * 80 + "\n")
 
         if move == 'L':
             try:
-                if maze[next_x-1][next_y] != Cell.BLOCKED and (next_x-1) > 0:
+                if maze[next_x-1][next_y] != Cell.BLOCKED and (next_x-1) >= 0:
                     next_x -= 1
             except:
                 pass
 
         elif move == 'D':
             try:
-                if maze[next_x][next_y-1] != Cell.BLOCKED and (next_y-1) > 0:
+                if maze[next_x][next_y-1] != Cell.BLOCKED and (next_y-1) >= 0:
                     next_y -= 1
             except:
                 pass
@@ -320,7 +324,8 @@ def read_maze(filename):
         maze = []
         for index, row in enumerate(upside_down_maze):
             maze.append([upside_row[index] for upside_row in upside_down_maze[::-1]])
-
+        
+        print(maze)
         return maze
 
 
