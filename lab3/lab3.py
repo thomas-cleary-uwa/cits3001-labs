@@ -44,7 +44,7 @@ class MazeAgent():
         if len(self.moves) > 1:
             if (x, y) != self.location_order[-1]:
                 self.last_success_move = self.moves[-1]
-        
+
         # add new location to order
         self.location_order.append((x, y))
 
@@ -62,7 +62,7 @@ class MazeAgent():
         self.moves.append(next_move)
         return next_move
 
-    
+
     def get_next_location(self, move):
         """ return the location we will be attempting to move to """
         current_location = self.location_order[-1]
@@ -91,7 +91,7 @@ class MazeAgent():
             elif y > 0:
                 if self.map[x][y-1]["type"] != Cell.BLOCKED:
                     return "D"
-                
+
         elif y <= x:
             if y > 0:
                 if self.map[x][y-1]["type"] != Cell.BLOCKED:
@@ -102,14 +102,14 @@ class MazeAgent():
                 if self.map[x-1][y]["type"] != Cell.BLOCKED:
                     return "L"
 
-        # If we can't move left or down, 
+        # If we can't move left or down,
         # if last move was left, try not to go backwards so Up
         # if last move was down try not to go backwards so Right
         # else right then up
         if self.last_success_move == "D":
             if self.map[x+1][y]["type"] != Cell.BLOCKED:
                 return "R"
-        
+
         elif self.last_success_move == "L":
             if self.map[x][y+1]["type"] != Cell.BLOCKED:
                 return "U"
@@ -163,7 +163,7 @@ class MazeAgent():
                 self.map.append([get_single_dict(Cell.OPEN)] * map_cols)
             # add final row of for unknown map depth
             self.map.append([get_single_dict(Cell.UNKNOWN)] * map_cols)
-        
+
         # if we have moved into a previously unknown row
         if map_rows == (x + 1):
             # make row known
@@ -197,12 +197,12 @@ class MazeAgent():
             # create new unkown column
             for row_num in range(len(self.map)):
                 self.map[row_num].append(get_single_dict(Cell.UNKNOWN))
-                
+
 
 
     def print_map(self):
-        """ show the current map 
-        
+        """ show the current map
+
         "." = open cell, "#" = blocked cell, "x" = current location,
         "?" = unknown cell, "G" = goal cell.
         """
@@ -256,7 +256,6 @@ class MazeAgent():
 def test_agent(maze):
     """ 3x3 maze """
 
-    goal  = (0, 0)
     start_x, start_y = (len(maze) - 1, len(maze[0]) - 1)
     next_x, next_y = start_x, start_y
 
@@ -300,53 +299,15 @@ def test_agent(maze):
                     next_y += 1
             except:
                 pass
-        
+
         num_moves += 1
 
-    
+
     print("Agent Reached the Goal")
 
 
-def main():
-    maze_3x3 = [
-        [Cell.OPEN,    Cell.OPEN,    Cell.BLOCKED],
-        [Cell.BLOCKED, Cell.OPEN,    Cell.OPEN],
-        [Cell.BLOCKED, Cell.BLOCKED, Cell.OPEN],
-    ]   
-
-
-    """
-    Maze Agent is Failing Density 40
-    .....##...
-    #.....#..#
-    ..#.....##
-    .###.##...
-    ...##.....
-    .#..#.....
-    .....#..#.
-    #.#..##...
-    ..###..#..
-    .##......#
-    """
-
-    """
-    Failing Maze Density 50
-    ####......
-    ..##...###
-    ##..#.##.#
-    .##.#.##.#
-    ###...####
-    ##....##.#
-    ##..#.#.#.
-    .####..#.#
-    ...#.#.#..
-    .#.......#
-    """
-
-    maze_d50 = read_maze("./maze_d50.txt")
-    test_agent(maze_d50)
-
 def read_maze(filename):
+    """ read a maze from a file and return as a list """
     with open(filename, "r") as maze_file:
         upside_down_maze = []
         for index, line in enumerate(maze_file):
@@ -362,6 +323,11 @@ def read_maze(filename):
 
         return list(reversed(upside_down_maze))
 
+
+def main():
+    """ run agent tests """
+    maze_d50 = read_maze("./maze_d50.txt")
+    test_agent(maze_d50)
 
 
 
