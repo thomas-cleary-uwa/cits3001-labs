@@ -200,8 +200,6 @@ class MazeAgent():
                 
 
 
-
-    
     def print_map(self):
         """ show the current map 
         
