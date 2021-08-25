@@ -13,9 +13,9 @@ class Cell(Enum):
     OPEN        = 2
 
 
-def get_single_dict(cell_type):
+def get_single_dict(cell_type, visited=False):
     """ return a dict with cell type """
-    return {"type": cell_type, "visited": False}
+    return {"type": cell_type, "visited": visited}
 
 class MazeAgent():
     """ An agent to navigate a maze where the goal is at location (0, 0) """
@@ -54,10 +54,10 @@ class MazeAgent():
 
         # if we have already been to the next move before
         # block current cell as we are now back tracking
-        next_location = self.get_next_location(next_move)
+        next_x, next_y = self.get_next_location(next_move)
 
-        if next_location in self.location_order:
-            self.map[x][y] = get_single_dict(Cell.BLOCKED)
+        if self.map[next_x][next_y]["visited"]:
+            self.map[x][y] = get_single_dict(Cell.BLOCKED, visited=True)
 
         self.moves.append(next_move)
         return next_move
@@ -79,49 +79,39 @@ class MazeAgent():
 
     def decide_move(self, x, y):
         """ decide the next move the agent will make """
-        # assuming no negative values
-        # if x < y try and move left
-        # if y < x try and move down
-        if x <= y:
-            if x > 0:
-                if self.map[x-1][y]["type"] != Cell.BLOCKED:
-                    return "L"
-                elif self.map[x][y-1]["type"] != Cell.BLOCKED:
-                    return "D"
-            elif y > 0:
-                if self.map[x][y-1]["type"] != Cell.BLOCKED:
-                    return "D"
+        visited, unvisited = self.get_possible_moves(x, y)
 
-        elif y <= x:
-            if y > 0:
-                if self.map[x][y-1]["type"] != Cell.BLOCKED:
-                    return "D"
-                elif self.map[x-1][y]["type"] != Cell.BLOCKED:
-                    return "L"
-            elif x > 0:
-                if self.map[x-1][y]["type"] != Cell.BLOCKED:
-                    return "L"
+        for move in unvisited:
+            # this list already sorted by L D R U
+            return move[-1]
 
-        # If we can't move left or down,
-        # if last move was left, try not to go backwards so Up
-        # if last move was down try not to go backwards so Right
-        # else right then up
-        if self.last_success_move == "D":
-            if self.map[x+1][y]["type"] != Cell.BLOCKED:
-                return "R"
-
-        elif self.last_success_move == "L":
-            if self.map[x][y+1]["type"] != Cell.BLOCKED:
-                return "U"
+        for move in visited:
+            if self.map[move[0]][move[1]]["type"] != Cell.BLOCKED:
+                return move[-1]
 
 
-        if self.map[x+1][y]["type"] != Cell.BLOCKED:
-            return "R"
+    def get_possible_moves(self, x, y):
+        """ return tuple of possible moves, separated by node to move to being
+            visited, unvisited
+        """
+        moves = [
+            (x-1, y, "L"),
+            (x, y-1, "D"),
+            (x+1, y, "R"),
+            (x, y+1, "U")
+        ]
 
-        if self.map[x][y+1]["type"] == Cell.BLOCKED:
-            raise Exception("Agent is stuck")
+        visited = []
+        unvisited = []
 
-        return "U"
+        for move in moves:
+            if self.map[move[0]][move[1]]["visited"]:
+                visited.append(move)
+            else:
+                unvisited.append(move)
+
+        # Visited and unvisited sorted by L D R U 
+        return (visited, unvisited)
 
 
     def update_map(self, x, y):
@@ -139,16 +129,16 @@ class MazeAgent():
 
                 # mark the cell we attempted to move to as blocked
                 if last_move == 'L':
-                    self.map[x-1][y] = get_single_dict(Cell.BLOCKED)
+                    self.map[x-1][y] = get_single_dict(Cell.BLOCKED, visited=True)
 
                 elif last_move == 'R':
-                    self.map[x+1][y] = get_single_dict(Cell.BLOCKED)
+                    self.map[x+1][y] = get_single_dict(Cell.BLOCKED, visited=True)
 
                 elif last_move == 'U':
-                    self.map[x][y+1] = get_single_dict(Cell.BLOCKED)
+                    self.map[x][y+1] = get_single_dict(Cell.BLOCKED, visited=True)
 
                 else: # last_move == 'D'
-                    self.map[x][y-1] = get_single_dict(Cell.BLOCKED)
+                    self.map[x][y-1] = get_single_dict(Cell.BLOCKED, visited=True)
 
 
     def extend_map(self, x, y):
@@ -274,14 +264,14 @@ def test_agent(maze):
 
         if move == 'L':
             try:
-                if maze[next_x-1][next_y] != Cell.BLOCKED:
+                if maze[next_x-1][next_y] != Cell.BLOCKED and (next_x-1) > 0:
                     next_x -= 1
             except:
                 pass
 
         elif move == 'D':
             try:
-                if maze[next_x][next_y-1] != Cell.BLOCKED:
+                if maze[next_x][next_y-1] != Cell.BLOCKED and (next_y-1) > 0:
                     next_y -= 1
             except:
                 pass
@@ -321,12 +311,16 @@ def read_maze(filename):
 
                 upside_down_maze[index].append(new_cell)
 
-        return list(reversed(upside_down_maze))
+        maze = []
+        for index, row in enumerate(upside_down_maze):
+            maze.append([upside_row[index] for upside_row in upside_down_maze[::-1]])
+
+        return maze
 
 
 def main():
     """ run agent tests """
-    maze_d50 = read_maze("./maze_d50.txt")
+    maze_d50 = read_maze("./maze_d50_passed.txt")
     test_agent(maze_d50)
 
 
