@@ -120,7 +120,8 @@ class MazeAgent():
 
     def update_map(self, x, y):
         """ update the map of the world with new information """
-        self.extend_map(x, y)
+        if x > len(self.map) or y > len(self.map[0]):
+            self.extend_map(x, y)
 
         # note that we have visited this cell on the map
         self.map[x][y]["visited"] = True
@@ -230,7 +231,7 @@ class MazeAgent():
                     print_cell("x")
 
                 elif cell["type"] == Cell.OPEN and cell["visited"]:
-                    print_cell("~")
+                    print_cell("o")
 
                 elif cell["type"] == Cell.OPEN:
                     print_cell(".")
@@ -254,7 +255,16 @@ class MazeAgent():
 
 
 def test_agent(maze):
-    """ 3x3 maze """
+    """ test agent in maze """
+    moves = {
+        "L"  : "Left",
+        "R"  : "Right",
+        "U"  : "Up",
+        "D"  : "Down",
+        None : "No successful move made yet"
+    }
+
+
 
     start_x, start_y = (len(maze) - 1, len(maze[0]) - 1)
     next_x, next_y = start_x, start_y
@@ -269,7 +279,8 @@ def test_agent(maze):
         move = agent.get_next_move(next_x, next_y)
 
         agent.print_map()
-        print("Next Agent Move: {}\n(Last successful move: {})\n".format(move, agent.last_success_move))
+        print("Next Agent Move: {}\n(Last successful move: {})\n".format(
+            moves[move], moves[agent.last_success_move]))
         print("-" * 80 + "\n")
 
         if move == 'L':
@@ -325,13 +336,12 @@ def read_maze(filename):
         for index, row in enumerate(upside_down_maze):
             maze.append([upside_row[index] for upside_row in upside_down_maze[::-1]])
         
-        print(maze)
         return maze
 
 
 def main():
     """ run agent tests """
-    maze_d50 = read_maze("./maze_d50_passed.txt")
+    maze_d50 = read_maze("./maze_d40_failed.txt")
     test_agent(maze_d50)
 
 

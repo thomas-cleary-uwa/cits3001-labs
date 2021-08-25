@@ -101,13 +101,13 @@ Next Agent Move: Left
 --------------------------------------------------------------------------------
 
 Move 3
-Telling agent current location (6, 9)
+Telling agent current location (7, 9)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   .   .   .   x   o   o   S   ?   y9  
+y9  .   .   .   .   .   .   #   x   o   S   ?   y9  
 
 y8  .   .   .   .   .   .   .   .   .   .   ?   y8  
 
@@ -129,21 +129,21 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Left
+Next Agent Move: Down
 (Last successful move: Left)
 
 --------------------------------------------------------------------------------
 
 Move 4
-Telling agent current location (5, 9)
+Telling agent current location (7, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   .   .   x   o   o   o   S   ?   y9  
+y9  .   .   .   .   .   .   #   o   o   S   ?   y9  
 
-y8  .   .   .   .   .   .   .   .   .   .   ?   y8  
+y8  .   .   .   .   .   .   .   x   .   .   ?   y8  
 
 y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
 
@@ -164,20 +164,20 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Left
-(Last successful move: Left)
+(Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
 Move 5
-Telling agent current location (4, 9)
+Telling agent current location (6, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   .   x   o   o   o   o   S   ?   y9  
+y9  .   .   .   .   .   .   #   o   o   S   ?   y9  
 
-y8  .   .   .   .   .   .   .   .   .   .   ?   y8  
+y8  .   .   .   .   .   .   x   o   .   .   ?   y8  
 
 y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
 
@@ -203,15 +203,49 @@ Next Agent Move: Left
 --------------------------------------------------------------------------------
 
 Move 6
-Telling agent current location (4, 9)
+Telling agent current location (5, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   x   o   o   o   o   S   ?   y9  
+y9  .   .   .   .   .   .   #   o   o   S   ?   y9  
 
-y8  .   .   .   .   .   .   .   .   .   .   ?   y8  
+y8  .   .   .   .   .   x   o   o   .   .   ?   y8  
+
+y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
+
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
+
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 7
+Telling agent current location (5, 8)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   .   .   .   .   #   o   o   S   ?   y9  
+
+y8  .   .   .   .   #   x   o   o   .   .   ?   y8  
 
 y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
 
@@ -236,154 +270,18 @@ Next Agent Move: Down
 
 --------------------------------------------------------------------------------
 
-Move 7
-Telling agent current location (4, 8)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   .   x   .   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
-
-y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
-
-y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
-
-y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
 Move 8
-Telling agent current location (4, 8)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   x   .   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   .   .   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
-
-y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
-
-y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
-
-y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 9
-Telling agent current location (4, 8)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   x   .   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   .   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
-
-y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
-
-y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
-
-y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Right
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 10
 Telling agent current location (5, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   .   .   .   .   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   x   .   .   .   .   ?   y8  
+y8  .   .   .   .   #   x   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   .   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
-
-y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
-
-y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
-
-y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 11
-Telling agent current location (5, 7)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   x   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
 y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
@@ -401,25 +299,25 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Down
-(Last successful move: Down)
+Next Agent Move: Up
+(Last successful move: Left)
 
 --------------------------------------------------------------------------------
 
-Move 12
-Telling agent current location (5, 6)
+Move 9
+Telling agent current location (5, 9)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   .   .   .   x   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  .   .   .   .   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   .   x   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
 y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
@@ -436,24 +334,92 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Left
-(Last successful move: Down)
+(Last successful move: Up)
 
 --------------------------------------------------------------------------------
 
-Move 13
-Telling agent current location (5, 6)
+Move 10
+Telling agent current location (4, 9)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   .   .   x   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  .   .   .   .   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   x   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
+
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 11
+Telling agent current location (3, 9)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   .   x   o   o   #   o   o   S   ?   y9  
+
+y8  .   .   .   .   #   o   o   o   .   .   ?   y8  
+
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
+
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 12
+Telling agent current location (3, 9)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   x   o   o   #   o   o   S   ?   y9  
+
+y8  .   .   .   .   #   o   o   o   .   .   ?   y8  
+
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
 y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
@@ -470,26 +436,60 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Down
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 13
+Telling agent current location (3, 8)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  .   .   .   x   #   o   o   o   .   .   ?   y8  
+
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
+
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
 (Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
 Move 14
-Telling agent current location (5, 5)
+Telling agent current location (2, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  .   .   x   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   .   .   .   x   .   .   .   .   ?   y5  
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
 y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
@@ -504,26 +504,26 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Left
-(Last successful move: Down)
+(Last successful move: Left)
 
 --------------------------------------------------------------------------------
 
 Move 15
-Telling agent current location (4, 5)
+Telling agent current location (1, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  .   x   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   .   .   x   o   .   .   .   .   ?   y5  
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
 y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
@@ -543,21 +543,21 @@ Next Agent Move: Left
 --------------------------------------------------------------------------------
 
 Move 16
-Telling agent current location (3, 5)
+Telling agent current location (0, 8)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  x   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  .   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   .   x   o   o   .   .   .   .   ?   y5  
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
 y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
@@ -571,27 +571,27 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Left
+Next Agent Move: Down
 (Last successful move: Left)
 
 --------------------------------------------------------------------------------
 
 Move 17
-Telling agent current location (3, 5)
+Telling agent current location (0, 7)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  x   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  .   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   x   o   o   .   .   .   .   ?   y5  
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
 y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
@@ -606,28 +606,28 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Down
-(Last successful move: Left)
+(Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
 Move 18
-Telling agent current location (3, 4)
+Telling agent current location (0, 6)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  x   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  .   .   .   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   .   .   x   .   .   .   .   .   .   ?   y4  
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
 y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
 
@@ -639,29 +639,29 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Left
+Next Agent Move: Down
 (Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
 Move 19
-Telling agent current location (2, 4)
+Telling agent current location (0, 5)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  x   .   .   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   .   x   o   .   .   .   .   .   .   ?   y4  
+y4  .   .   .   .   .   .   .   .   .   .   ?   y4  
 
 y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
 
@@ -673,29 +673,63 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Left
-(Last successful move: Left)
+Next Agent Move: Down
+(Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
 Move 20
-Telling agent current location (2, 4)
+Telling agent current location (0, 5)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  x   .   .   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   x   o   .   .   .   .   .   .   ?   y4  
+y4  #   .   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Right
+(Last successful move: Down)
+
+--------------------------------------------------------------------------------
+
+Move 21
+Telling agent current location (1, 5)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   x   .   .   .   .   .   .   .   .   ?   y5  
+
+y4  #   .   .   .   .   .   .   .   .   .   ?   y4  
 
 y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
 
@@ -708,64 +742,98 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Down
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 21
-Telling agent current location (2, 3)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
-
-y3  .   .   x   .   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Down)
+(Last successful move: Right)
 
 --------------------------------------------------------------------------------
 
 Move 22
-Telling agent current location (2, 3)
+Telling agent current location (1, 5)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   x   .   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
+y4  #   #   .   .   .   .   .   .   .   .   ?   y4  
 
-y3  .   #   x   .   .   .   .   .   .   .   ?   y3  
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Right
+(Last successful move: Right)
+
+--------------------------------------------------------------------------------
+
+Move 23
+Telling agent current location (2, 5)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   x   .   .   .   .   .   .   .   ?   y5  
+
+y4  #   #   .   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Down
+(Last successful move: Right)
+
+--------------------------------------------------------------------------------
+
+Move 24
+Telling agent current location (2, 4)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   .   .   .   .   .   .   .   ?   y5  
+
+y4  #   #   x   .   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   .   .   .   .   .   .   .   .   ?   y3  
 
 y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
@@ -780,28 +848,28 @@ Next Agent Move: Down
 
 --------------------------------------------------------------------------------
 
-Move 23
-Telling agent current location (2, 3)
+Move 25
+Telling agent current location (2, 4)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
+y4  #   #   x   .   .   .   .   .   .   .   ?   y4  
 
-y3  .   #   x   .   .   .   .   .   .   .   ?   y3  
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   .   .   .   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -814,130 +882,28 @@ Next Agent Move: Right
 
 --------------------------------------------------------------------------------
 
-Move 24
-Telling agent current location (3, 3)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
-
-y3  .   #   o   x   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   #   .   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 25
-Telling agent current location (3, 3)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
-
-y3  .   #   o   x   .   .   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Right
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
 Move 26
-Telling agent current location (3, 3)
+Telling agent current location (2, 4)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
+y4  #   #   x   #   .   .   .   .   .   .   ?   y4  
 
-y3  .   #   o   x   #   .   .   .   .   .   ?   y3  
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 27
-Telling agent current location (2, 3)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   o   o   .   .   .   .   .   .   ?   y4  
-
-y3  .   #   x   #   #   .   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -946,32 +912,32 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Up
-(Last successful move: Left)
+(Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
-Move 28
-Telling agent current location (2, 4)
+Move 27
+Telling agent current location (2, 5)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   x   .   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   x   o   .   .   .   .   .   .   ?   y4  
+y4  #   #   #   #   .   .   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   .   .   .   .   .   ?   y3  
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -984,28 +950,28 @@ Next Agent Move: Right
 
 --------------------------------------------------------------------------------
 
-Move 29
-Telling agent current location (3, 4)
+Move 28
+Telling agent current location (3, 5)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   x   .   .   .   .   .   .   ?   y5  
 
-y4  .   #   #   x   .   .   .   .   .   .   ?   y4  
+y4  #   #   #   #   .   .   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   .   .   .   .   .   ?   y3  
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -1014,6 +980,40 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Right
+(Last successful move: Right)
+
+--------------------------------------------------------------------------------
+
+Move 29
+Telling agent current location (4, 5)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   x   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   .   .   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Down
 (Last successful move: Right)
 
 --------------------------------------------------------------------------------
@@ -1025,89 +1025,21 @@ Telling agent current location (4, 4)
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
 
-y4  .   #   #   o   x   .   .   .   .   .   ?   y4  
+y4  #   #   #   #   x   .   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   .   .   .   .   .   ?   y3  
+y3  .   .   #   .   .   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Right
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 31
-Telling agent current location (5, 4)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   x   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   .   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 32
-Telling agent current location (5, 3)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   x   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   .   .   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -1120,28 +1052,28 @@ Next Agent Move: Down
 
 --------------------------------------------------------------------------------
 
-Move 33
-Telling agent current location (5, 2)
+Move 31
+Telling agent current location (4, 4)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
 
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
+y4  #   #   #   #   x   .   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
+y3  .   .   #   .   #   .   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   .   x   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -1149,7 +1081,75 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
-Next Agent Move: Left
+Next Agent Move: Right
+(Last successful move: Down)
+
+--------------------------------------------------------------------------------
+
+Move 32
+Telling agent current location (5, 4)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   x   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   .   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Down
+(Last successful move: Right)
+
+--------------------------------------------------------------------------------
+
+Move 33
+Telling agent current location (5, 3)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   x   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   .   .   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Down
 (Last successful move: Down)
 
 --------------------------------------------------------------------------------
@@ -1161,21 +1161,191 @@ Telling agent current location (5, 2)
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
 
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   #   x   .   .   .   .   ?   y2  
+y2  .   .   .   .   .   x   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Down)
+
+--------------------------------------------------------------------------------
+
+Move 35
+Telling agent current location (4, 2)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
+
+y2  .   .   .   .   x   o   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 36
+Telling agent current location (3, 2)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
+
+y2  .   .   .   x   o   o   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 37
+Telling agent current location (2, 2)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
+
+y2  .   .   x   o   o   o   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 38
+Telling agent current location (1, 2)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
+
+y2  .   x   o   o   o   o   .   .   .   .   ?   y2  
+
+y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
+
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+Next Agent Move: Left
+(Last successful move: Left)
+
+--------------------------------------------------------------------------------
+
+Move 39
+Telling agent current location (0, 2)
+
+    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
+
+y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
+
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
+
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
+
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
+
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
+
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
+
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
+
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
+
+y2  x   o   o   o   o   o   .   .   .   .   ?   y2  
 
 y1  .   .   .   .   .   .   .   .   .   .   ?   y1  
 
@@ -1184,415 +1354,41 @@ y0  G   .   .   .   .   .   .   .   .   .   ?   y0
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Down
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 35
-Telling agent current location (5, 2)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   x   .   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Right
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 36
-Telling agent current location (6, 2)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   x   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   .   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Right)
-
---------------------------------------------------------------------------------
-
-Move 37
-Telling agent current location (6, 1)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   x   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Down
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 38
-Telling agent current location (6, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   .   x   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Down)
-
---------------------------------------------------------------------------------
-
-Move 39
-Telling agent current location (5, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   .   .   .   .   x   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
 (Last successful move: Left)
 
 --------------------------------------------------------------------------------
 
 Move 40
-Telling agent current location (4, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   .   .   .   x   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 41
-Telling agent current location (3, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   .   .   x   o   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 42
-Telling agent current location (2, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   .   x   o   o   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 43
-Telling agent current location (2, 0)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   .   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   #   x   o   o   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Up
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 44
-Telling agent current location (2, 1)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   .   x   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   #   o   o   o   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Up)
-
---------------------------------------------------------------------------------
-
-Move 45
-Telling agent current location (1, 1)
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
-
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
-
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
-
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
-
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
-
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
-
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
-
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
-
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
-
-y1  .   x   o   .   .   #   o   .   .   .   ?   y1  
-
-y0  G   #   o   o   o   o   o   .   .   .   ?   y0  
-
-    x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
-
-Next Agent Move: Left
-(Last successful move: Left)
-
---------------------------------------------------------------------------------
-
-Move 46
 Telling agent current location (0, 1)
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 y10 ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   ?   y10 
 
-y9  .   .   .   #   o   o   o   o   o   S   ?   y9  
+y9  .   .   #   o   o   o   #   o   o   S   ?   y9  
 
-y8  .   .   .   #   o   o   .   .   .   .   ?   y8  
+y8  o   o   o   o   #   o   o   o   .   .   ?   y8  
 
-y7  .   .   .   .   #   o   .   .   .   .   ?   y7  
+y7  o   .   .   .   .   #   .   .   .   .   ?   y7  
 
-y6  .   .   .   .   #   o   .   .   .   .   ?   y6  
+y6  o   .   .   .   .   .   .   .   .   .   ?   y6  
 
-y5  .   .   #   o   o   o   .   .   .   .   ?   y5  
+y5  o   o   o   o   o   .   .   .   .   .   ?   y5  
 
-y4  .   #   #   o   o   o   .   .   .   .   ?   y4  
+y4  #   #   #   #   o   o   .   .   .   .   ?   y4  
 
-y3  .   #   #   #   #   o   .   .   .   .   ?   y3  
+y3  .   .   #   .   #   o   .   .   .   .   ?   y3  
 
-y2  .   .   #   #   #   o   o   .   .   .   ?   y2  
+y2  o   o   o   o   o   o   .   .   .   .   ?   y2  
 
-y1  x   o   o   .   .   #   o   .   .   .   ?   y1  
+y1  x   .   .   .   .   .   .   .   .   .   ?   y1  
 
-y0  G   #   o   o   o   o   o   .   .   .   ?   y0  
+y0  G   .   .   .   .   .   .   .   .   .   ?   y0  
 
     x0  x1  x2  x3  x4  x5  x6  x7  x8  x9  x10 
 
 Next Agent Move: Down
-(Last successful move: Left)
+(Last successful move: Down)
 
 --------------------------------------------------------------------------------
 
