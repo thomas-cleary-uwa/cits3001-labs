@@ -189,29 +189,26 @@ class MazeAgent():
                 self.map[row_num].append(get_single_dict(Cell.UNKNOWN))
 
 
-
     def print_map(self):
-        """ show the current map
-
-        "." = open cell, "#" = blocked cell, "x" = current location,
-        "?" = unknown cell, "G" = goal cell.
-        """
+        """ print map to be what tester shows """
 
         def print_cell(marker):
             """ print a cell marker """
             print("{: <4}".format(marker), end="")
 
-        colnums = ["y" + str(y) for y in range(len(self.map[0]))]
-
+        row_nums = ["x" + str(x) for x in range(len(self.map))]
         print_cell("")
-        for num in colnums:
+        for num in row_nums:
             print_cell(num)
         print("\n")
 
-        for row_num, row in enumerate(self.map):
-            print("{: <4}".format("x" + str(row_num)), sep="", end="")
 
-            for col_num, cell in enumerate(row):
+        for col_num in range(len(self.map[0]) - 1, -1, -1):
+            print("{: <4}".format("y" + str(col_num)), sep="", end="")
+
+            for row_num, row in enumerate(self.map):
+                cell = row[col_num]
+
                 if (row_num, col_num) == self.location_order[-1] and \
                    (row_num, col_num) == self.goal:
                      print_cell("W")
@@ -239,7 +236,16 @@ class MazeAgent():
 
                 else:
                     print_cell("?")
+
+            print("{: <4}".format("y" + str(col_num)), sep="", end="")
+
             print("\n")
+
+        row_nums = ["x" + str(x) for x in range(len(self.map))]
+        print_cell("")
+        for num in row_nums:
+            print_cell(num)
+        print("\n")  
 
 
 
@@ -258,7 +264,7 @@ def test_agent(maze):
         print("Move {}\nTelling agent current location ({}, {})\n".format(num_moves, next_x, next_y))
         move = agent.get_next_move(next_x, next_y)
 
-        agent.print_map()
+        agent.print_map_better()
         print("Next Agent Move: {}\n(Last successful move: {})\n".format(move, agent.last_success_move))
         print("-" * 80 + "\n")
 
