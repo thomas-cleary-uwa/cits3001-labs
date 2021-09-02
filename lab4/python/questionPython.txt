@@ -1,0 +1,11 @@
+Write a python method that, given a startWord (String), an endWord (String) and a dictionary (List of Strings), finds a shortest sequence of words in the dictionary such that the first word is the startWord, the last word is the endWord, and each word is equal to the previous word with one letter changed. 
+
+(The letters in the word cannot be rearranged).
+
+All words in the sequence are the same length. 
+
+If no sequence is possible, an empty list is returned.
+
+It is assumed that both startWord and endWord are elements of the dictionary.
+
+Think carefully about the branching factor of your search. Naively scanning all words in the dictionary to find next steps will time out.
