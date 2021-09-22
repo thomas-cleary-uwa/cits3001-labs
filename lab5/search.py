@@ -6,14 +6,33 @@ import random
 
 from curses import wrapper
 
-NUM_ROWS = 16
-NUM_COLS = 16
+NUM_ROWS = 20
+NUM_COLS = 40
+
+UNDISCOVERED = "."
+DISCOVERED   = "o"
+IN_QUEUE     = "?"
+CURR_POS     = "O"
+
+
+ANIMATION_SPEED = 0.1
+
+START_X = 4
+START_Y = 6
 
 
 def print_map(screen, search_map, queue=None):
     for row in search_map:
         for char in row:
-            screen.addch(char)
+            if char == CURR_POS:
+                screen.addch(char, curses.color_pair(1))
+            elif char == IN_QUEUE:
+                screen.addch(char, curses.color_pair(2))
+            elif char == UNDISCOVERED:
+                screen.addch(char, curses.color_pair(3))
+            else:
+                screen.addch(char)
+
         screen.addch("\n")
     screen.addch("\n")
     screen.addch("\n")
@@ -115,23 +134,24 @@ def bfs(screen, search_map, at_x, at_y):
     
     while len(queue) > 0:
         if previous_node is not None:
-            search_map[previous_node[1]][previous_node[0]] = "o"
+            search_map[previous_node[1]][previous_node[0]] = DISCOVERED
 
         current_node = queue.pop(0)
         cur_x, cur_y = current_node
 
-        search_map[cur_y][cur_x] = "O"
+        search_map[cur_y][cur_x] = CURR_POS
 
         for neighbour in get_unvisited_neighbours(search_map, cur_x, cur_y):
-            if neighbour not in queue:
-                queue.append(neighbour)
+            queue.append(neighbour)
+            search_map[neighbour[1]][neighbour[0]] = IN_QUEUE
+
 
         previous_node = current_node
 
         print_map(screen, search_map)
         screen.refresh()
 
-        time.sleep(0.05)
+        time.sleep(ANIMATION_SPEED)
 
         screen.clear()
     
@@ -147,10 +167,14 @@ def end(screen):
 def main(args):
     screen = curses.initscr()
 
+    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
+    curses.init_pair(2, curses.COLOR_MAGENTA, curses.COLOR_BLACK)
+    curses.init_pair(3, curses.COLOR_BLACK, curses.COLOR_WHITE)
+
     search_map = [["."] * NUM_COLS for _ in range(NUM_ROWS)]
 
-    at_x = 4
-    at_y = 6
+    at_x = START_X
+    at_y = START_Y
     search_map[at_y][at_x] = "O"
 
     # random_traverse(screen, search_map, at_x, at_y)
