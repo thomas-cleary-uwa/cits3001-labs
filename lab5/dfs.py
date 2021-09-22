@@ -60,12 +60,15 @@ def print_map(screen, search_map, num_moves, goal_found=False, goal_in_queue=Fal
     screen.addch("\n")
 
 
-def get_unvisited_neighbours(search_map, at_x, at_y):
+def get_unvisited_neighbours(search_map, at_x, at_y, goal_in_queue=False):
     neighbours = []
 
     directions = list(range(1, 4+1))
 
-    visitable = [UNDISCOVERED, GOAL]
+    visitable = [UNDISCOVERED]
+
+    if not goal_in_queue:
+        visitable.append(GOAL)
 
     for direction in directions:
         if direction == 1: # left
@@ -73,17 +76,17 @@ def get_unvisited_neighbours(search_map, at_x, at_y):
                 if search_map[at_y][at_x-1] in visitable:
                     neighbours.append((at_x-1, at_y))
 
-        if direction == 2: # up
+        elif direction == 2: # up
             if not at_y - 1 < 0:
                 if search_map[at_y-1][at_x] in visitable:
                     neighbours.append((at_x, at_y-1)) 
 
-        if direction == 3: # right
+        elif direction == 3: # right
             if not at_x + 1 > len(search_map[0]) - 1:
                 if search_map[at_y][at_x+1] in visitable:
                     neighbours.append((at_x+1, at_y))
 
-        if direction == 4: #down
+        elif direction == 4: #down
             if not at_y + 1 > len(search_map) - 1:
                 if search_map[at_y+1][at_x] in visitable:
                     neighbours.append((at_x, at_y+1)) 
@@ -127,7 +130,7 @@ def dfs(screen, search_map, at_x, at_y):
             break
 
         # we want the one we find first in get neighbours to be added to the front of the queue
-        neighbours = list(reversed(get_unvisited_neighbours(search_map, cur_x, cur_y)))
+        neighbours = list(reversed(get_unvisited_neighbours(search_map, cur_x, cur_y, goal_in_queue=goal_in_queue)))
 
         for neighbour in neighbours:
             queue = [neighbour] + queue

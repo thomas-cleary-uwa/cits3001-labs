@@ -72,17 +72,17 @@ def get_unvisited_neighbours(search_map, at_x, at_y):
                 if search_map[at_y][at_x-1] in visitable:
                     neighbours.append((at_x-1, at_y))
 
-        if direction == 2: # up
+        elif direction == 2: # up
             if not at_y - 1 < 0:
                 if search_map[at_y-1][at_x] in visitable:
                     neighbours.append((at_x, at_y-1)) 
 
-        if direction == 3: # right
+        elif direction == 3: # right
             if not at_x + 1 > len(search_map[0]) - 1:
                 if search_map[at_y][at_x+1] in visitable:
                     neighbours.append((at_x+1, at_y))
 
-        if direction == 4: #down
+        elif direction == 4: #down
             if not at_y + 1 > len(search_map) - 1:
                 if search_map[at_y+1][at_x] in visitable:
                     neighbours.append((at_x, at_y+1)) 

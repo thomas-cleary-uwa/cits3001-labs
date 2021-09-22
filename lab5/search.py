@@ -40,13 +40,13 @@ def main(args):
         search_map = get_maze()
         at_x, at_y = get_current_pos(search_map)
 
-        random_traverse(screen, copy.deepcopy(search_map), at_x, at_y)
+        # random_traverse(screen, copy.deepcopy(search_map), at_x, at_y)
 
-        time.sleep(2)
+        # time.sleep(2)
 
-        bfs(screen, copy.deepcopy(search_map), at_x, at_y)
+        # bfs(screen, copy.deepcopy(search_map), at_x, at_y)
 
-        time.sleep(2)
+        # time.sleep(2)
 
         dfs(screen, copy.deepcopy(search_map), at_x, at_y)
 
