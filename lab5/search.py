@@ -16,7 +16,7 @@ from constants import *
 
 def end(screen):
     time.sleep(3)
-    screen.clear()
+    screen.erase()
     screen.addstr("Goodbye\n")
     screen.refresh()
     time.sleep(1)
@@ -33,9 +33,10 @@ def main(args):
     curses.init_pair(6, curses.COLOR_RED, curses.COLOR_YELLOW)
     curses.init_pair(7, curses.COLOR_YELLOW, curses.COLOR_CYAN)
     curses.init_pair(8, curses.COLOR_YELLOW, curses.COLOR_MAGENTA)
+    curses.init_pair(9, curses.COLOR_YELLOW, curses.COLOR_BLACK)
 
     for i in range(NUM_RUNS):
-        screen.clear()
+        screen.erase()
 
         search_map = get_maze()
         at_x, at_y = get_current_pos(search_map)

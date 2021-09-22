@@ -31,6 +31,9 @@ def print_map(screen, search_map, num_moves, max_moves, goal_found=False, goal_i
                 else:
                     screen.addch(GOAL, curses.color_pair(6))
 
+            elif char == START:
+                screen.addch(START, curses.color_pair(9))
+
 
         screen.addch("\n")
 
@@ -103,18 +106,26 @@ def random_move(search_map, at_x, at_y):
 
 
 def random_traverse(screen, search_map, at_x, at_y):
+    SPEED = ANIMATION_SPEED // 4
+
+    start_x = at_x
+    start_y = at_y
 
     goal_found = False
     prev_x = None
     prev_y = None
 
-    max_moves = NUM_ROWS * NUM_COLS // 2
+    max_moves = NUM_ROWS * NUM_COLS * 4
+
+
     moves_made = 0
 
     print_map(screen, search_map, moves_made, max_moves, goal_found=goal_found)
     screen.refresh()
-    time.sleep(ANIMATION_SPEED)
-    screen.clear()
+    time.sleep(SPEED)
+    screen.erase()
+
+
 
 
 
@@ -129,7 +140,12 @@ def random_traverse(screen, search_map, at_x, at_y):
         if search_map[next_y][next_x] == GOAL:
             goal_found = True
 
-        search_map[at_y][at_x]     = DISCOVERED
+
+        if search_map[at_y][at_x] != START:
+            search_map[at_y][at_x]     = DISCOVERED
+
+        search_map[start_y][start_x] = START
+
         search_map[next_y][next_x] = CURR_POS
 
         prev_x, prev_y = at_x, at_y
@@ -137,5 +153,5 @@ def random_traverse(screen, search_map, at_x, at_y):
 
         print_map(screen, search_map, moves_made, max_moves, goal_found=goal_found)
         screen.refresh()
-        time.sleep(ANIMATION_SPEED)
-        screen.clear()
+        time.sleep(SPEED / 2)
+        screen.erase()

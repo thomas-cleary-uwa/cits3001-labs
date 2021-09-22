@@ -32,6 +32,9 @@ def print_map(screen, search_map, num_moves, goal_found=False, goal_in_queue=Fal
                 else:
                     screen.addch(GOAL, curses.color_pair(6))
 
+            elif char == START:
+                screen.addch(START, curses.color_pair(9))
+
         screen.addch("\n")
 
     for _ in range(NUM_COLS):
@@ -58,6 +61,7 @@ def print_map(screen, search_map, num_moves, goal_found=False, goal_in_queue=Fal
         screen.addch("-")
 
     screen.addch("\n")
+
 
 def get_unvisited_neighbours(search_map, at_x, at_y):
     neighbours = []
@@ -91,6 +95,9 @@ def get_unvisited_neighbours(search_map, at_x, at_y):
 
 
 def bfs(screen, search_map, at_x, at_y):
+    start_x = at_x
+    start_y = at_y
+
     queue = []
 
     queue.append((at_x, at_y))
@@ -115,12 +122,13 @@ def bfs(screen, search_map, at_x, at_y):
         search_map[cur_y][cur_x] = CURR_POS
 
         if previous_node is not None:
+            search_map[start_y][start_x] = START
             moves_made += 1
 
         print_map(screen, search_map, moves_made, goal_found, goal_in_queue)
         screen.refresh()
         time.sleep(ANIMATION_SPEED)
-        screen.clear()
+        screen.erase()
 
         if goal_found:
             break
@@ -139,6 +147,6 @@ def bfs(screen, search_map, at_x, at_y):
             print_map(screen, search_map, moves_made, goal_found, goal_in_queue)
             screen.refresh()
             time.sleep(ANIMATION_SPEED)
-            screen.clear()
+            screen.erase()
 
         previous_node = current_node
