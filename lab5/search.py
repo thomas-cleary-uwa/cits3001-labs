@@ -9,6 +9,7 @@ from curses import wrapper
 
 from bfs import *
 from dfs import *
+from astar import *
 from random_search import *
 from maze import *
 from constants import *
@@ -41,15 +42,17 @@ def main(args):
         search_map = get_maze()
         at_x, at_y = get_current_pos(search_map)
 
-        random_traverse(screen, copy.deepcopy(search_map), at_x, at_y)
-
-        time.sleep(2)
+        #random_traverse(screen, copy.deepcopy(search_map), at_x, at_y)
+        #time.sleep(2)
 
         bfs(screen, copy.deepcopy(search_map), at_x, at_y)
-
         time.sleep(2)
 
         dfs(screen, copy.deepcopy(search_map), at_x, at_y)
+        time.sleep(2)
+
+        goal_x, goal_y = get_goal(search_map)
+        astar(screen, copy.deepcopy(search_map), at_x, at_y, goal_x, goal_y)
 
         time.sleep(2)
 

@@ -115,7 +115,7 @@ def random_traverse(screen, search_map, at_x, at_y):
     prev_x = None
     prev_y = None
 
-    max_moves = NUM_ROWS * NUM_COLS * 4
+    max_moves = NUM_ROWS * NUM_COLS
 
 
     moves_made = 0

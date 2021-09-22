@@ -17,7 +17,7 @@ def get_maze():
     # at_y = 0
     search_map[at_y][at_x] = CURR_POS
 
-    add_walls(search_map, density=0.3)
+    add_walls(search_map, density=DENSITY)
     add_goal(search_map)
 
     return search_map
@@ -28,6 +28,13 @@ def get_current_pos(maze):
     for y, row in enumerate(maze):
         for x, col in enumerate(row):
             if col == CURR_POS:
+                return (x, y)
+
+
+def get_goal(maze):
+    for y, row in enumerate(maze):
+        for x, col in enumerate(row):
+            if col == GOAL:
                 return (x, y)
 
 
@@ -63,4 +70,5 @@ def add_goal(search_map):
 
         if search_map[rand_row][rand_col] != CURR_POS:
             search_map[rand_row][rand_col] = GOAL
+
             goal_added = True

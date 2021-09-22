@@ -146,8 +146,6 @@ def dfs(screen, search_map, at_x, at_y):
             else:
                 goal_in_queue = True
 
-            previous_node = current_node
-
             print_map(screen, search_map, moves_made, goal_found, goal_in_queue)
             screen.refresh()
             time.sleep(ANIMATION_SPEED)
