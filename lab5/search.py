@@ -6,32 +6,33 @@ import random
 
 from curses import wrapper
 
-NUM_ROWS = 20
-NUM_COLS = 40
+NUM_ROWS = 5
+NUM_COLS = 10
 
-UNDISCOVERED = "."
-DISCOVERED   = "o"
+UNDISCOVERED = "o"
+DISCOVERED   = "."
 IN_QUEUE     = "?"
-CURR_POS     = "O"
+CURR_POS     = "C"
+EMPTY        = " "
 
-
+NUM_RUNS = 10
 ANIMATION_SPEED = 0.1
 
-START_X = 4
-START_Y = 6
 
 
 def print_map(screen, search_map, queue=None):
     for row in search_map:
         for char in row:
             if char == CURR_POS:
-                screen.addch(char, curses.color_pair(1))
+                screen.addch(CURR_POS, curses.color_pair(1))
             elif char == IN_QUEUE:
-                screen.addch(char, curses.color_pair(2))
+                screen.addch(IN_QUEUE, curses.color_pair(2))
             elif char == UNDISCOVERED:
-                screen.addch(char, curses.color_pair(3))
+                screen.addch(UNDISCOVERED, curses.color_pair(3))
+            elif char == DISCOVERED:
+                screen.addch(DISCOVERED, curses.color_pair(4))
             else:
-                screen.addch(char)
+                screen.addch(EMPTY)
 
         screen.addch("\n")
     screen.addch("\n")
@@ -104,22 +105,22 @@ def get_unvisited_neighbours(search_map, at_x, at_y):
     for direction in directions:
         if direction == 1: # left
             if not at_x - 1 < 0:
-                if search_map[at_y][at_x-1] == ".":
+                if search_map[at_y][at_x-1] == UNDISCOVERED:
                     neighbours.append((at_x-1, at_y))
 
         if direction == 2: # up
             if not at_y - 1 < 0:
-                if search_map[at_y-1][at_x] == ".":
+                if search_map[at_y-1][at_x] == UNDISCOVERED:
                     neighbours.append((at_x, at_y-1)) 
 
         if direction == 3: # right
             if not at_x + 1 > len(search_map[0]) - 1:
-                if search_map[at_y][at_x+1] == ".":
+                if search_map[at_y][at_x+1] == UNDISCOVERED:
                     neighbours.append((at_x+1, at_y))
 
         if direction == 4: #down
             if not at_y + 1 > len(search_map) - 1:
-                if search_map[at_y+1][at_x] == ".":
+                if search_map[at_y+1][at_x] == UNDISCOVERED:
                     neighbours.append((at_x, at_y+1)) 
 
     return neighbours
@@ -140,20 +141,22 @@ def bfs(screen, search_map, at_x, at_y):
         cur_x, cur_y = current_node
 
         search_map[cur_y][cur_x] = CURR_POS
+        print_map(screen, search_map)
+        screen.refresh()
+        time.sleep(ANIMATION_SPEED)
+        screen.clear()
 
         for neighbour in get_unvisited_neighbours(search_map, cur_x, cur_y):
             queue.append(neighbour)
             search_map[neighbour[1]][neighbour[0]] = IN_QUEUE
+            previous_node = current_node
 
+            print_map(screen, search_map)
+            screen.refresh()
+            time.sleep(ANIMATION_SPEED)
+            screen.clear()
 
         previous_node = current_node
-
-        print_map(screen, search_map)
-        screen.refresh()
-
-        time.sleep(ANIMATION_SPEED)
-
-        screen.clear()
     
 
 def end(screen):
@@ -167,18 +170,22 @@ def end(screen):
 def main(args):
     screen = curses.initscr()
 
-    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
-    curses.init_pair(2, curses.COLOR_MAGENTA, curses.COLOR_BLACK)
+    curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_CYAN)
+    curses.init_pair(2, curses.COLOR_BLACK, curses.COLOR_MAGENTA)
     curses.init_pair(3, curses.COLOR_BLACK, curses.COLOR_WHITE)
+    curses.init_pair(4, curses.COLOR_BLACK, curses.COLOR_GREEN)
 
-    search_map = [["."] * NUM_COLS for _ in range(NUM_ROWS)]
+    for i in range(NUM_RUNS):
+        screen.clear()
 
-    at_x = START_X
-    at_y = START_Y
-    search_map[at_y][at_x] = "O"
+        search_map = [[UNDISCOVERED] * NUM_COLS for _ in range(NUM_ROWS)]
 
-    # random_traverse(screen, search_map, at_x, at_y)
-    bfs(screen, search_map, at_x, at_y)
+        at_x = random.randint(0, NUM_COLS-1)
+        at_y = random.randint(0, NUM_ROWS-1)
+        search_map[at_y][at_x] = "O"
+
+        # random_traverse(screen, search_map, at_x, at_y)
+        bfs(screen, search_map, at_x, at_y)
 
     end(screen)
 
