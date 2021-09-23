@@ -9,7 +9,7 @@ from constants import *
 from maze import *
 
 
-
+BLINK = True
 
 def get_neighbours(search_map, at_x, at_y, goal_in_queue=False):
     neighbours = []
@@ -132,6 +132,8 @@ def astar(screen, search_map , at_x, at_y, goal_x, goal_y):
 
 
 def print_map(screen, search_map, num_moves, goal_found=False, goal_in_queue=False):
+    global BLINK
+
     for row in search_map:
         for char in row:
 
@@ -154,10 +156,13 @@ def print_map(screen, search_map, num_moves, goal_found=False, goal_in_queue=Fal
                 screen.addch(WALL, curses.color_pair(5))
 
             elif char == GOAL:
-                if goal_in_queue:
+                if BLINK:
+                    screen.addch(GOAL, curses.color_pair(9))
+                elif goal_in_queue:
                     screen.addch(GOAL, curses.color_pair(8))
                 else:
                     screen.addch(GOAL, curses.color_pair(6))
+                BLINK = not BLINK
 
             elif char == START:
                 screen.addch(START, curses.color_pair(9))
