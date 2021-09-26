@@ -1,0 +1,13 @@
+For this question you should build a minimax agent for connect four. You have been given a  python skeleton and should write a class with a single method, move.
+
+This method is given:
+
+ a symbol ('X' or 'O' indicating which discs are the players), 
+a board (a list of 7 strings, each string representing a column of the game with the first character being the bottom row, made up of the characters 'X' and 'O'. Note that  the strings are initially empty and grow throughout the game to a maximum length of 6.
+your opponents last move (the index of a column they dropped the disc into, or -1 if it is the first move).
+The method returns the index of the column your strategy chooses to put the disc into. Note if your method returns a column outside the range [0-6] or tries to put a disc into a full column, it automatically loses.
+
+The first test method will pitch your agent against a random opponent four times, and your agent needs to win all games to pass. At the end of the game you are given a string representation of the board. Your discs are labelled 'A', 'B', 'C',... and the opponents are 'a','b','c',... so you can infer the order they were played. 
+
+The second test requires your agent to beat a simple 2 ply minimax agent.
+
