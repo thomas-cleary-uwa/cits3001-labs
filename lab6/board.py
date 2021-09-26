@@ -46,4 +46,5 @@ class C4Board():
 
 
     def is_game_over(self):
-        pass
+        """ NEED TO WRITE THIS!!! """
+        return False

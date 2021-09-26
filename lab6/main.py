@@ -112,7 +112,7 @@ def main():
     human_last_move = -1
 
 
-    while not board.is_full():
+    while not board.is_full() and not board.is_game_over():
 
         if agent_turn:
             agent_move = agent.move(
@@ -155,7 +155,10 @@ def main():
 
     print_board(board)
 
-    print("Board is full")
+    if board.is_game_over():
+        print("GAME OVER")
+    else:
+        print("Board is full")
 
 
 if __name__ == "__main__":
