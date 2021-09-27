@@ -90,12 +90,9 @@ def print_board(board):
     print(ROOF * 15)
     print(col_line)
     print()
-    
-    
 
 
-
-def main():
+def play():
     board = C4Board()
 
     agent = C4Agent()
@@ -114,6 +111,7 @@ def main():
 
     while not board.is_full() and not board.is_game_over():
 
+
         if agent_turn:
             agent_move = agent.move(
                 agent_piece, board.board, human_last_move
@@ -123,6 +121,10 @@ def main():
             if not valid_move:
                 print("Agent made an invalid move")
                 break
+
+            if human_last_move == -1:
+                print()
+                print("-" * 20)
             
             print("Agent played at {}".format(agent_move))
             print("-" * 20)
@@ -166,7 +168,34 @@ def main():
             print(bcolors.WARNING + "Human Won" + bcolors.ENDC)
 
     else:
-        print("Board is full")
+        print("Board is full - Draw")
+
+    print()
+    
+    
+
+
+
+def main():
+    playing = True
+
+    while playing:
+        print()
+        print("*" * 4 + " NEW GAME " + "*" * 4)
+
+        play()
+
+        again = ""
+        while again not in ["y", "n"]:
+            again = input("Play again (y/n): ").lower()
+
+        if again == "n":
+            playing = False
+
+    print()
+    print("Thanks for playing!\n")
+
+
 
 
 if __name__ == "__main__":
