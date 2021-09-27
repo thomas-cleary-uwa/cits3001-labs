@@ -5,20 +5,20 @@ import random
 class C4Agent:
 
     def random_move(self, symbol, board, last_move):
-    '''
-    Make a random move unless center bottom is available
-    '''
+        '''
+        Make a random move unless center bottom is available
+        '''
 
-    # If we get to make the first move, go for the centre
-    if last_move == -1 or len(board[3]) == 0:
-        return 3
+        # If we get to make the first move, go for the centre
+        if last_move == -1 or len(board[3]) == 0:
+            return 3
 
-    while True:
-        move = random.randint(0, 6)
+        while True:
+            move = random.randint(0, 6)
 
-        if len(board[move]) < 6:
-            return move
-            
+            if len(board[move]) < 6:
+                return move
+
 
     def move(self, symbol, board, last_move):
         '''
