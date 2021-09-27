@@ -14,7 +14,7 @@ class C4Agent:
         '''
 
         # If we get to make the first move, go for the centre
-        if last_move == -1:
+        if last_move == -1 or len(board[3]) == 0:
             return 3
 
         while True:
