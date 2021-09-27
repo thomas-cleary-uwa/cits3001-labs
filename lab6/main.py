@@ -123,7 +123,9 @@ def main():
             if not valid_move:
                 print("Agent made an invalid move")
                 break
-
+            
+            print("Agent played at {}".format(agent_move))
+            print("-" * 20)
             agent_turn = False
 
 
@@ -133,6 +135,7 @@ def main():
             valid_move_made = False
             while not valid_move_made:
                 try:
+                    print("-" * 20)
                     move = int(input("Enter next move: "))
                 except ValueError:
                     print("Enter a valid column number (0-6)")
@@ -156,7 +159,12 @@ def main():
     print_board(board)
 
     if board.is_game_over():
-        print("GAME OVER")
+        print("GAME OVER - ", end="")
+        if board.winner == agent_piece:
+            print(bcolors.FAIL + "Agent Won" + bcolors.ENDC)
+        else:
+            print(bcolors.WARNING + "Human Won" + bcolors.ENDC)
+
     else:
         print("Board is full")
 
