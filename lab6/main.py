@@ -94,7 +94,6 @@ def print_board(board):
 
 def play():
     board = C4Board()
-
     agent = C4Agent()
 
     turn_order = random.randint(0, 1)
