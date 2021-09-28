@@ -12,10 +12,14 @@ class C4Agent:
         self.num_cols = 7
 
         self.board    = ["" for _ in range(self.num_cols)]
+        self.search_tree = {}
+
         self.symbol   = None
         self.opponent_symbol = None
 
         self.chain_length_win = 4
+
+        self.search_depth = 2
 
     def move(self, symbol, board, last_move):
         '''
@@ -41,23 +45,15 @@ class C4Agent:
 
         self.update_board(board)
 
-        curr_board_value = self.evaluate_board(board)
+        best_value, best_move = self.minimax(self.board, self.search_depth)
 
-        possible_moves = self.get_possible_moves()
-        possible_boards = self.get_possible_boards(possible_moves, self.symbol)
+        print("Best value found - {}\nBest move found - {}".format(
+            best_value, best_move
+        ))
 
-        best_move = -1
-        highest_value = -math.inf
-
-        for move in possible_boards:
-            value = self.evaluate_board(possible_boards[move])
-
-            if value > highest_value:
-                highest_value = value
-                best_move = move
-
-        if best_move > -1:
+        if best_move is not None:
             return best_move
+
 
         while True:
             move = random.randint(0, self.num_cols - 1)
@@ -66,20 +62,96 @@ class C4Agent:
                 return move
 
 
+    def minimax(self, parent_board, depth, max_turn=True):
+        if depth == 0 or self.is_board_terminal(parent_board):
+            return (self.evaluate_board(parent_board), None) # cannot return a move here because only evaluating the board
 
-    def get_possible_moves(self):
+        if max_turn:
+            value = -math.inf
+            best_move = None
+            
+            possible_moves = self.get_possible_moves(parent_board)
+            child_boards = self.get_possible_boards(possible_moves, parent_board, self.symbol)
+
+            for move in child_boards:
+                child_board = child_boards[move]
+                move_value = self.minimax(child_board, depth-1, max_turn=False)[0]
+
+                if value < move_value:
+                    best_move = move
+                    value = move_value
+
+            return (value, best_move)
+
+        else:
+            value = math.inf
+            best_move = None
+
+            possible_moves = self.get_possible_moves(parent_board)
+            child_boards = self.get_possible_boards(possible_moves, parent_board, self.opponent_symbol)
+
+            for move in child_boards:
+                child_board = child_boards[move]
+                move_value = self.minimax(child_board, depth-1, max_turn=True)[0]
+                if value > move_value:
+                    best_move = move
+                    value = move_value
+            
+            return (value, best_move)
+
+
+    def is_board_terminal(self, board):
+        horizontal_board = self.get_horizontal_board(board)
+
+        regex_col = "^[XO\s]*[{}]{{4}}[XO\s]*$"
+        regex_row = "^[XO\s]*[{}]{{4}}[XO\s]*$"
+
+        # check vertical 
+        for column in board:
+
+            if re.search(regex_col.format(self.symbol), column):
+                return True
+
+            if re.search(regex_col.format(self.opponent_symbol), column):
+                return True
+  
+        # check horizontal
+        for row in horizontal_board:
+
+            if re.search(regex_row.format(self.symbol), row):
+                return True
+
+            if re.search(regex_row.format(self.opponent_symbol), row):
+                return True
+
+        # check diagonals
+        diagonals = self.get_diagonal_strings(horizontal_board) + self.get_diagonal_strings(self.flip_board(horizontal_board))
+
+        regex = "^[X0\s]*[{}]{{4}}[X0\s]*$"
+
+        for diag in diagonals:
+            if re.search(regex.format(self.symbol), diag):
+                return True
+            if re.search(regex.format(self.opponent_symbol), diag):
+                return True
+
+        return False
+
+
+
+    def get_possible_moves(self, board):
         moves = []
-        for move, column in enumerate(self.board):
+        for move, column in enumerate(board):
             if len(column) < self.num_rows:
                 moves.append(move)
         return moves
 
 
-    def get_possible_boards(self, possible_moves, symbol):
+    def get_possible_boards(self, possible_moves, board, symbol):
         new_boards = {}
 
         for move in possible_moves:
-            board_copy = copy.deepcopy(self.board)
+            board_copy = copy.deepcopy(board)
             board_copy[move] += symbol
             new_boards[move] = board_copy
 
