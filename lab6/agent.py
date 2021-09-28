@@ -19,7 +19,7 @@ class C4Agent:
 
         self.chain_length_win = 4
 
-        self.search_depth = 2
+        self.search_depth = 4
 
     def move(self, symbol, board, last_move):
         '''
@@ -45,11 +45,8 @@ class C4Agent:
 
         self.update_board(board)
 
-        best_value, best_move = self.minimax(self.board, self.search_depth)
+        best_value, best_move, best_depth = self.minimax(self.board, self.search_depth)
 
-        print("Best value found - {}\nBest move found - {}".format(
-            best_value, best_move
-        ))
 
         if best_move is not None:
             return best_move
@@ -62,42 +59,47 @@ class C4Agent:
                 return move
 
 
-    def minimax(self, parent_board, depth, max_turn=True):
-        if depth == 0 or self.is_board_terminal(parent_board):
-            return (self.evaluate_board(parent_board), None) # cannot return a move here because only evaluating the board
+    def minimax(self, parent_board, depth_remaining, max_turn=True):
+        if depth_remaining == 0 or self.is_board_terminal(parent_board):
+            return (self.evaluate_board(parent_board), None, depth_remaining) # cannot return a move here because only evaluating the board
 
         if max_turn:
             value = -math.inf
             best_move = None
+            best_depth = 0
             
             possible_moves = self.get_possible_moves(parent_board)
             child_boards = self.get_possible_boards(possible_moves, parent_board, self.symbol)
 
             for move in child_boards:
                 child_board = child_boards[move]
-                move_value = self.minimax(child_board, depth-1, max_turn=False)[0]
+                move_value, _, move_depth = self.minimax(child_board, depth_remaining-1, max_turn=False)
 
-                if value < move_value:
+                if value < move_value or (value == move_value and move_depth > best_depth):
                     best_move = move
                     value = move_value
+                    best_depth = move_depth
 
-            return (value, best_move)
+            return (value, best_move, best_depth)
 
         else:
             value = math.inf
             best_move = None
+            best_depth = depth_remaining
 
             possible_moves = self.get_possible_moves(parent_board)
             child_boards = self.get_possible_boards(possible_moves, parent_board, self.opponent_symbol)
 
             for move in child_boards:
                 child_board = child_boards[move]
-                move_value = self.minimax(child_board, depth-1, max_turn=True)[0]
-                if value > move_value:
+                move_value, _, move_depth = self.minimax(child_board, depth_remaining-1, max_turn=True)
+
+                if value > move_value or (value == move_value and move_depth < best_depth):
                     best_move = move
                     value = move_value
+                    best_depth = move_depth
             
-            return (value, best_move)
+            return (value, best_move, best_depth)
 
 
     def is_board_terminal(self, board):
